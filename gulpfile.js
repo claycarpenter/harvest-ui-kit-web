@@ -68,8 +68,16 @@ gulp.task('watch', function() {
 
 gulp.task('build', ['sass']);
 
-gulp.task('clean-build', function (cb) {
-  runSequence('clean', 'build', cb);
+gulp.task('copy-scss', function () {
+  gulp.src(projectPaths.sources.scss)
+    .pipe(filter(['*', '!harvest.scss']))
+    .pipe(gulp.dest(projectPaths.distRoot));
+});
+
+gulp.task('build-dist', ['build', 'copy-scss']);
+
+gulp.task('dist', function (cb) {
+  runSequence('clean', 'build-dist', cb);
 });
 
 gulp.task('test-build', function (cb) {
