@@ -1,35 +1,39 @@
 
-$clr-disabled-mask: #CFCFCF;
+@function color-builder($base-color) {
+  @return (
+    base: $base-color,
+    hover: mix($base-color, #FFF, 80),
+    active: mix($base-color, #000, 80),
+    disabled: mix($base-color, $clr-disabled-mask, 30)
+  );
+}
 
-$clr-default: #BD4932;
-$clr-default-hover: mix($clr-default, #FFF, 80);
-$clr-default-active: mix($clr-default, #000, 80);
-$clr-default-disabled: mix($clr-default, $clr-disabled-mask, 30);
-
-.test-box {
-  width: 150px;
-  height: 250px;
-  display: inline-block;
-
-  background-color: $clr-default;
-
-  &:hover {
-    background-color: $clr-default-hover;
-  }
-
-  &:active {
-    background-color: $clr-default-active;
-  }
-
-  &.hover {
-    background-color: $clr-default-hover;
-  }
-
-  &.active {
-    background-color: $clr-default-active;
-  }
-
-  &.disabled {
-    background-color: $clr-default-disabled;
+@mixin fill-builder($prefix, $color-map) {
+  @each $key, $value in $color-map {
+    .fill-#{$prefix}-#{$key} {
+      background-color: $value;
+    }
   }
 }
+
+// Disabled color mask. Combined with other colors to present
+// widgets in disabled state.
+$clr-disabled-mask: #CFCFCF;
+
+// Base colors
+$clr-default-base: #BD4932;
+$clr-primary-base: #105B63;
+$clr-secondary-base: #DB9E36;
+$clr-bodytext-base: #4D3713;
+
+$clr-default: color-builder($clr-default-base);
+$clr-primary: color-builder($clr-primary-base);
+$clr-secondary: color-builder($clr-secondary-base);
+$clr-bodytext: (
+  base: $clr-bodytext-base
+);
+
+@include fill-builder('default', $clr-default);
+@include fill-builder('primary', $clr-primary);
+@include fill-builder('secondary', $clr-secondary);
+@include fill-builder('bodytext', $clr-bodytext);
