@@ -81,7 +81,7 @@ gulp.task('dist', function (cb) {
 });
 
 gulp.task('test-build', function (cb) {
-  runSequence('clean-build', 'copy-dist-test', cb);
+  runSequence('dist', 'copy-dist-test', cb);
 });
 
 gulp.task('test-serve', function (cb) {
