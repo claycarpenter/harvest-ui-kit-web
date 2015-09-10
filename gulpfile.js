@@ -63,7 +63,7 @@ gulp.task('copy-dist-test', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(projectPaths.sources.scss, ['sass']);
+    gulp.watch(projectPaths.sources.scss, ['test-build']);
 });
 
 gulp.task('build', ['sass']);
