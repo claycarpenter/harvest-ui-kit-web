@@ -1,6 +1,11 @@
+/*
+  Harvest UI Kit
+*/
 
-$color: red;
+// Basics
+@import 'partials/variables';
+@import 'partials/colors';
 
-html, body {
-  color: $color;  
-}
+// Fonts and typography
+@import 'partials/fonts';
+@import 'partials/typography';

@@ -1,0 +1,35 @@
+
+$clr-disabled-mask: #CFCFCF;
+
+$clr-default: #BD4932;
+$clr-default-hover: mix($clr-default, #FFF, 80);
+$clr-default-active: mix($clr-default, #000, 80);
+$clr-default-disabled: mix($clr-default, $clr-disabled-mask, 30);
+
+.test-box {
+  width: 150px;
+  height: 250px;
+  display: inline-block;
+
+  background-color: $clr-default;
+
+  &:hover {
+    background-color: $clr-default-hover;
+  }
+
+  &:active {
+    background-color: $clr-default-active;
+  }
+
+  &.hover {
+    background-color: $clr-default-hover;
+  }
+
+  &.active {
+    background-color: $clr-default-active;
+  }
+
+  &.disabled {
+    background-color: $clr-default-disabled;
+  }
+}

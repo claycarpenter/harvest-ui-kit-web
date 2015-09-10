@@ -1,0 +1,42 @@
+
+// Import Open Sans from Google Web Fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400,400italic,600,600italic,700,700italic);
+
+// Define font family/weight combinations for reuse by other components.
+@mixin opensans($weight, $style: normal) {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+.opensans-w300 {
+  @include opensans(300);
+}
+
+.opensans-w300i {
+  @include opensans(300, italic);
+}
+
+.opensans-w400 {
+  @include opensans(400);
+}
+
+.opensans-w400i {
+  @include opensans(400, italic);
+}
+
+.opensans-w600 {
+  @include opensans(600);
+}
+
+.opensans-w600i {
+  @include opensans(600, italic);
+}
+
+.opensans-w700 {
+  @include opensans(700);
+}
+
+.opensans-w700i {
+  @include opensans(700, italic);
+}
