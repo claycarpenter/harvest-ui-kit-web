@@ -28,10 +28,7 @@ var browserSyncConfig = {
         baseDir: './' + projectPaths.testRoot
     },
     files: [
-        // TODO: Can this be simplified?
-        projectPaths.testRoot + '/css/*.css',
-        projectPaths.testRoot + '/*.html',
-        projectPaths.testRoot + '/js/*.js'
+        projectPaths.testRoot + '/**/*'
     ]
 };
 
