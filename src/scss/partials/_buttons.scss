@@ -5,51 +5,61 @@ $button-heights: (
   large: $base-unit * 3
 );
 
-@mixin button-builder($size) {
-  @if $size == 'medium' {
-    $className: '';
-  } @else {
-    $className: '.' + $size;
-  }
+@mixin button-builder($color-map, $colorClassName: '') {
+  @each $size, $height in $button-heights {
 
-  a.btn#{$className},
-  button#{$className} {
-    display: inline-block;
-
-    text-decoration: none;
-
-    border-radius: 4px;
-
-    $height: map-get($button-heights, $size);
-    height: $height;
-    line-height: $height - 10px;
-
-    padding: 5px 10px;
-
-    @extend .fill-default-base;
-
-    &.disabled {
-      @extend .fill-default-disabled;
+    @if $size == 'medium' {
+      $sizeClassName: '';
+    } @else {
+      $sizeClassName: '.' + $size;
     }
 
-    &.primary {
-      @extend .fill-primary-base;
+    a.btn#{$sizeClassName}#{$colorClassName},
+    button#{$sizeClassName}#{$colorClassName} {
+      display: inline-block;
+
+      text-decoration: none;
+
+      border-radius: 4px;
+
+      height: $height;
+      line-height: $height;
+
+      padding: 0 ($height / 2);
+
+      @include bg-color($color-map, base);
+
+      &.disabled,
+      &.disabled:hover,
+      &.disabled:active {
+        @include bg-color($color-map, disabled);
+
+        cursor: default;
+      }
+
+      &.hover,
+      &:hover {
+        @include bg-color($color-map, hover);
+      }
+
+      &.active,
+      &:active {
+        @include bg-color($color-map, active);
+      }
+
+      @extend .opensans-w600;
+
+      color: #FFF;
+
+      @include font-size($size);
+
+      border: none;
     }
-
-    &.secondary {
-      @extend .fill-secondary-base;
-    }
-
-    @extend .opensans-w600;
-
-    color: #FFF;
-
-    @include font-size($size);
-
-    border: none;
   }
 }
 
-@include button-builder(small);
-@include button-builder(medium);
-@include button-builder(large);
+@include button-builder($clr-default);
+
+@include button-builder($clr-primary, '.primary');
+
+@include button-builder($clr-secondary, '.secondary');
