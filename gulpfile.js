@@ -39,13 +39,15 @@ var browserSyncConfig = {
 };
 
 gulp.task('clean', function (cb) {
-  del([
+  del.sync([
     // Clean out dist folder
     projectPaths.distRoot,
 
     // Clean out test/dist folder
     projectPaths.testDistRoot
-  ], cb);
+  ]);
+
+  cb();
 });
 
 gulp.task('sass', function() {
