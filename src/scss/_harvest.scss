@@ -2,6 +2,9 @@
   Harvest UI Kit
 */
 
+// Normalize.css, a CSS reset stylesheet.
+@import '../../bower_components/normalize.css/normalize.css';
+
 // Basics
 @import 'partials/variables';
 @import 'partials/colors';
