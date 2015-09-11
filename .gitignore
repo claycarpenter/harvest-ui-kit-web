@@ -5,6 +5,9 @@ Icon
 # Local node modules
 node_modules
 
+# Local bower components
+bower_components
+
 # Build output
 dist
 test/dist

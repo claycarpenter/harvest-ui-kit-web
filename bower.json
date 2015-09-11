@@ -1,0 +1,21 @@
+{
+  "name": "harvest-ui-kit-web",
+  "version": "0.0.1",
+  "homepage": "https://github.com/claycarpenter/harvest-ui-kit-web",
+  "authors": [
+    "Clay Carpenter <claycarpenter@gmail.com>"
+  ],
+  "description": "Web components for the Harvest UI kit.",
+  "main": "dist/harvest.css",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.3"
+  }
+}
