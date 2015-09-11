@@ -37,3 +37,7 @@ $clr-bodytext: (
 @include fill-builder('primary', $clr-primary);
 @include fill-builder('secondary', $clr-secondary);
 @include fill-builder('bodytext', $clr-bodytext);
+
+@mixin bg-color($color-map, $key) {
+  background-color: map-get($color-map, $key);
+}
