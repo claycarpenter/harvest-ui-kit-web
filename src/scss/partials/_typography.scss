@@ -66,3 +66,33 @@ p {
     }
   }
 }
+
+a {
+  @extend .opensans-w600;
+
+  color: map-get($clr-default, base);
+
+  text-decoration: none;
+
+  &.hover,
+  &:hover {
+    color: map-get($clr-default, hover);
+
+    text-decoration: underline;
+  }
+
+  &.active,
+  &:active {
+    color: map-get($clr-default, active);
+
+    text-decoration: none;
+  }
+
+  &.disabled {
+    color: map-get($clr-default, disabled);
+
+    text-decoration: none;
+
+    cursor: default;
+  }
+}
