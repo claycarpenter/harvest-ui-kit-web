@@ -1,9 +1,42 @@
 
+@mixin link-builder($color-map, $selector: 'a') {
+  #{$selector} {
+    @extend .opensans-w600;
+
+    color: map-get($color-map, base);
+
+    text-decoration: none;
+
+    &.hover,
+    &:hover {
+      color: map-get($color-map, hover);
+
+      text-decoration: underline;
+    }
+
+    &.active,
+    &:active {
+      color: map-get($color-map, active);
+
+      text-decoration: none;
+    }
+
+    &.disabled {
+      color: map-get($color-map, disabled);
+
+      text-decoration: none;
+
+      cursor: default;
+    }
+  }
+}
+
 html, body {
   // Set base font size.
   font-size: $base-font-size;
 }
 
+// Headlines
 $header-font-size: 1rem;
 @for $i from 6 through 1 {
   h#{$i} {
@@ -16,6 +49,7 @@ $header-font-size: 1rem;
   $header-font-size: $header-font-size * 1.3;
 }
 
+// Basic text styles
 p,
 blockquote {
   @extend .opensans-w400;
@@ -67,32 +101,7 @@ p {
   }
 }
 
-a {
-  @extend .opensans-w600;
-
-  color: map-get($clr-default, base);
-
-  text-decoration: none;
-
-  &.hover,
-  &:hover {
-    color: map-get($clr-default, hover);
-
-    text-decoration: underline;
-  }
-
-  &.active,
-  &:active {
-    color: map-get($clr-default, active);
-
-    text-decoration: none;
-  }
-
-  &.disabled {
-    color: map-get($clr-default, disabled);
-
-    text-decoration: none;
-
-    cursor: default;
-  }
-}
+// Links
+@include link-builder($clr-default, 'a');
+@include link-builder($clr-primary, 'a.primary');
+@include link-builder($clr-secondary, 'a.secondary');
