@@ -77,7 +77,9 @@ gulp.task('copy-scss', function () {
     .pipe(gulp.dest(projectPaths.distRoot));
 });
 
-gulp.task('build-dist', ['build', 'copy-scss']);
+gulp.task('build-dist', function (cb) {
+  runSequence('build', 'copy-scss', cb);
+});
 
 gulp.task('dist', function (cb) {
   runSequence('clean', 'build-dist', cb);
