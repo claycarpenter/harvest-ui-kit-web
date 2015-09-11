@@ -1,37 +1,55 @@
 
-@mixin button-builder() {
-
-}
-
 $button-heights: (
   small: $base-unit,
   medium: $base-unit * 2,
   large: $base-unit * 3
 );
 
-a.btn,
-button {
-  border-radius: 4px;
-
-  height: map-get($button-heights, small);
-
-  padding: 5px 10px;
-
-  @extend .fill-default-base;
-
-  &.primary {
-    @extend .fill-primary-base;
+@mixin button-builder($size) {
+  @if $size == 'medium' {
+    $className: '';
+  } @else {
+    $className: '.' + $size;
   }
 
-  &.secondary {
-    @extend .fill-secondary-base;
+  a.btn#{$className},
+  button#{$className} {
+    display: inline-block;
+
+    text-decoration: none;
+
+    border-radius: 4px;
+
+    $height: map-get($button-heights, $size);
+    height: $height;
+    line-height: $height - 10px;
+
+    padding: 5px 10px;
+
+    @extend .fill-default-base;
+
+    &.disabled {
+      @extend .fill-default-disabled;
+    }
+
+    &.primary {
+      @extend .fill-primary-base;
+    }
+
+    &.secondary {
+      @extend .fill-secondary-base;
+    }
+
+    @extend .opensans-w600;
+
+    color: #FFF;
+
+    @include font-size($size);
+
+    border: none;
   }
-
-  @extend .opensans-w600;
-
-  color: #FFF;
-
-  font-size: .8rem;
-
-  border: none;
 }
+
+@include button-builder(small);
+@include button-builder(medium);
+@include button-builder(large);
