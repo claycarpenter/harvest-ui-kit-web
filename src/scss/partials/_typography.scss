@@ -36,7 +36,7 @@ cite {
 }
 
 blockquote {
-  border-left: 2px solid #BD4932;
+  border-left: 2px solid map-get($clr-default, base);
   margin-left: 5px;
 
   padding-left: 10px;
