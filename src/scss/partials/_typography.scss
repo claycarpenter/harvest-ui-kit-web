@@ -1,4 +1,14 @@
 
+$font-sizes: (
+  regular: 1rem,
+  lead: 1.3rem,
+  small: 0.8rem
+);
+
+@mixin font-size($size: regular) {
+  font-size: map-get($font-sizes, $size);
+}
+
 @mixin link-builder($color-map, $selector: 'a') {
   #{$selector} {
     @extend .opensans-w600;
@@ -85,11 +95,11 @@ blockquote {
 
 p {
   &.lead {
-    font-size: 1.3rem;
+    @include font-size(lead);
   }
 
   &.small {
-    font-size: 0.8rem;
+    @include font-size(small);
 
     em, i {
       @extend .opensans-w300i;
