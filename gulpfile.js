@@ -24,12 +24,18 @@ var projectPaths = {
 };
 
 var browserSyncConfig = {
+    // Serve files from test directory.
     server: {
         baseDir: './' + projectPaths.testRoot
     },
+
+    // Watch all files under served directory.
     files: [
         projectPaths.testRoot + '/**/*'
-    ]
+    ],
+
+    // Disable opening new browser window on startup.
+    open: false
 };
 
 gulp.task('clean', function (cb) {
