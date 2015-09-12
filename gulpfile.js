@@ -54,7 +54,12 @@ gulp.task('clean', function (cb) {
 
 gulp.task('sass', function() {
    return gulp.src(projectPaths.sources.scss)
-        .pipe(sass())
+        .pipe(sass({
+            includePaths: [
+              'src/scss',
+              'bower_components/normalize.css/'
+            ]
+        }))
         .pipe(gulp.dest(projectPaths.distRoot))
         .pipe(filter('**/*.css'))
         .pipe(browserSyncReload({stream: true}));
