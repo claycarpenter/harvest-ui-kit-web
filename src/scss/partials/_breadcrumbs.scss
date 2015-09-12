@@ -1,4 +1,9 @@
 
+$geometry: (
+  small: height: 15px,
+  medium: height: 30px
+);
+
 @mixin breadcrumb-builder($size, $color-map, $styleClass: '') {
 
   @if $styleClass != '' {
@@ -6,35 +11,38 @@
   }
 
   $sizeClassName: '';
-  @if $size == 'medium' {
+  @if $size != 'medium' {
     $sizeClassName: '.' + $size;
   }
 
   .breadcrumb#{$sizeClassName}#{$styleClass}  {
     @include horizontal-list;
 
+    $height: map-get($geometry, height);
+    $color: map-get($color-map, base);
+
     li {
       &,
       > a {
-        height: 15px;
-        line-height: 120%;
+        height: $height;
+        line-height: $height - 2;
 
-        color: map-get($color-map, base);
+        color: $color;
       }
 
       padding: 0 18px 0 10px;
-      border: 1px solid map-get($color-map, base);
-      border-radius: 4px;
+      border: 1px solid $color;
+      border-radius: $border-radius;
       background-color: white;
 
-      @include font-size(small);
+      @include font-size($size);
 
       margin-left: -10px;
 
       &:last-of-type {
         padding-right: 10px;
         color: white;
-        background-color: map-get($color-map, base);
+        background-color: $color;
       }
     }
   }
@@ -43,3 +51,7 @@
 @include breadcrumb-builder(small, $clr-default);
 @include breadcrumb-builder(small, $clr-primary, 'primary');
 @include breadcrumb-builder(small, $clr-secondary, 'secondary');
+
+@include breadcrumb-builder(medium, $clr-default);
+@include breadcrumb-builder(medium, $clr-primary, 'primary');
+@include breadcrumb-builder(medium, $clr-secondary, 'secondary');
