@@ -8,7 +8,7 @@ $font-sizes: (
 
 // FontAwesome font sizes.
 // These are adjusted upward from the corresponding normal text sizes
-// to better size these icons for buttons. 
+// to better size these icons for buttons.
 $fa-font-sizes: (
   small: 1.333rem,
   medium: 2.667rem,
@@ -61,6 +61,8 @@ html, body {
 
   // Set base color.
   color: map-get($clr-bodytext, base);
+
+  @extend .opensans-w400;
 }
 
 // Headlines
