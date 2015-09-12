@@ -43,6 +43,10 @@
   }
 }
 
+@include breadcrumb-builder(tiny, $clr-default);
+@include breadcrumb-builder(tiny, $clr-primary, 'primary');
+@include breadcrumb-builder(tiny, $clr-secondary, 'secondary');
+
 @include breadcrumb-builder(small, $clr-default);
 @include breadcrumb-builder(small, $clr-primary, 'primary');
 @include breadcrumb-builder(small, $clr-secondary, 'secondary');
