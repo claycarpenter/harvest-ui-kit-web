@@ -49,6 +49,14 @@ $button-heights: (
 
       @extend .opensans-w600;
 
+      &.fa {
+        font-family: FontAwesome;
+
+        @include fa-font-size($size);
+        
+        padding: 0 ($height / 4);
+      }
+
       color: #FFF;
 
       @include font-size($size);
