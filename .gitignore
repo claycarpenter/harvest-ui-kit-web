@@ -11,3 +11,4 @@ bower_components
 # Build output
 dist
 test/dist
+test/vendor

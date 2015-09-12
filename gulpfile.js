@@ -20,7 +20,9 @@ var projectPaths = {
     },
     distRoot: 'dist',
     testRoot: 'test',
-    testDistRoot: 'test/dist'
+    testDistRoot: 'test/dist',
+    testVendorRoot: 'test/vendor',
+    bowerRoot: 'bower_components'
 };
 
 var browserSyncConfig = {
@@ -67,6 +69,12 @@ gulp.task('copy-dist-test', function() {
     .pipe(gulp.dest(projectPaths.testDistRoot));
 });
 
+gulp.task('copy-vendor', function () {
+  // FontAwesome fonts.
+  gulp.src(projectPaths.bowerRoot + '/font-awesome/fonts/**/*')
+    .pipe(gulp.dest(projectPaths.testVendorRoot + '/fonts/'));
+});
+
 gulp.task('watch', function() {
     gulp.watch(projectPaths.sources.scss, ['test-build']);
 });
@@ -88,7 +96,7 @@ gulp.task('dist', function (cb) {
 });
 
 gulp.task('test-build', function (cb) {
-  runSequence('dist', 'copy-dist-test', cb);
+  runSequence('dist', ['copy-dist-test', 'copy-vendor'], cb);
 });
 
 gulp.task('test-serve', function (cb) {
