@@ -1,0 +1,34 @@
+
+@mixin group-button($color-map) {
+  border-radius: 0;
+  border-right: 1px solid map-get($color-map, active);
+}
+
+.btn-group {
+  @include horizontal-list;
+
+  li button,
+  li a.btn {
+    @include group-button($clr-default);
+
+    &.primary {
+      @include group-button($clr-primary);
+    }
+
+    &.secondary {
+      @include group-button($clr-secondary);
+    }
+  }
+
+  li:first-of-type button,
+  li:first-of-type a.btn {
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+
+  li:last-of-type button,
+  li:last-of-type a.btn {
+    border-radius: 0 $border-radius $border-radius 0;
+
+    border: none;
+  }
+}

@@ -1,0 +1,23 @@
+
+@mixin float-container() {
+  &:after {
+    // Float container fix.
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin horizontal-list() {
+  @include float-container;
+
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    float: left;
+  }
+}
