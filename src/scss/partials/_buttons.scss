@@ -52,9 +52,14 @@ $button-heights: (
       &.fa {
         font-family: FontAwesome;
 
-        @include fa-font-size($size);
-        
+        $font-size: map-get($fa-font-sizes, $size);
+        font-size: $font-size;
+
         padding: 0 ($height / 4);
+
+        width: $font-size * 1.7;
+
+        text-align: center;
       }
 
       color: #FFF;
