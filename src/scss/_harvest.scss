@@ -5,6 +5,10 @@
 // Normalize.css, a CSS reset stylesheet.
 @import 'normalize';
 
+// FontAwesome. Point to test directory location for fonts. 
+$fa-font-path: "../vendor/fonts";
+@import 'font-awesome';
+
 // Basics
 @import 'partials/variables';
 @import 'partials/colors';

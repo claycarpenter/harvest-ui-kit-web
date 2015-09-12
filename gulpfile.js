@@ -57,7 +57,8 @@ gulp.task('sass', function() {
         .pipe(sass({
             includePaths: [
               'src/scss',
-              'bower_components/normalize.css/'
+              'bower_components/normalize.css/',
+              'bower_components/font-awesome/scss/'
             ]
         }))
         .pipe(gulp.dest(projectPaths.distRoot))
