@@ -44,6 +44,9 @@ $font-sizes: (
 html, body {
   // Set base font size.
   font-size: $base-font-size;
+
+  // Set base color.
+  color: map-get($clr-bodytext, base);
 }
 
 // Headlines
