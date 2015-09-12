@@ -1,10 +1,4 @@
 
-$button-heights: (
-  small: $base-unit,
-  medium: $base-unit * 2,
-  large: $base-unit * 3
-);
-
 @mixin button-builder($color-map, $colorClassName: '') {
   @each $size, $height in $button-heights {
 

@@ -1,6 +1,34 @@
 
-$base-font-size: 15px !default;
-
 $base-unit: 30px;
 
 $border-radius: 4px;
+
+// Normal text font sizes.
+$base-font-size: 15px !default;
+$font-sizes: (
+  tiny: 0.6667rem,
+  small: 0.8rem,
+  medium: 1rem,
+  large: 1.3rem
+);
+
+// FontAwesome font sizes.
+// These are adjusted upward from the corresponding normal text sizes
+// to better size these icons for buttons.
+$fa-font-sizes: (
+  small: 1.333rem,
+  medium: 2.667rem,
+  large: 4rem
+);
+
+
+$button-heights: (
+  small: $base-unit,
+  medium: $base-unit * 2,
+  large: $base-unit * 3
+);
+
+$geometry: (
+  small: 15px,
+  medium: 30px
+);

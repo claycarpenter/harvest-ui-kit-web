@@ -1,9 +1,4 @@
 
-$geometry: (
-  small: 15px,
-  medium: 30px
-);
-
 @mixin breadcrumb-builder($size, $color-map, $styleClass: '') {
 
   @if $styleClass != '' {

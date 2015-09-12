@@ -1,19 +1,5 @@
 
-// Normal text font sizes.
-$font-sizes: (
-  small: 0.8rem,
-  medium: 1rem,
-  large: 1.3rem
-);
 
-// FontAwesome font sizes.
-// These are adjusted upward from the corresponding normal text sizes
-// to better size these icons for buttons.
-$fa-font-sizes: (
-  small: 1.333rem,
-  medium: 2.667rem,
-  large: 4rem
-);
 
 @mixin font-size($size: regular) {
   font-size: map-get($font-sizes, $size);
