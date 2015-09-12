@@ -66,6 +66,9 @@ $button-heights: (
 
       @include font-size($size);
 
+      text-transform: uppercase;
+      letter-spacing: .2em;
+
       border: none;
     }
   }
