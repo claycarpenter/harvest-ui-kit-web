@@ -1,7 +1,7 @@
 
 $geometry: (
-  small: height: 15px,
-  medium: height: 30px
+  small: 15px,
+  medium: 30px
 );
 
 @mixin breadcrumb-builder($size, $color-map, $styleClass: '') {
@@ -18,7 +18,7 @@ $geometry: (
   .breadcrumb#{$sizeClassName}#{$styleClass}  {
     @include horizontal-list;
 
-    $height: map-get($geometry, height);
+    $height: map-get($geometry, $size);
     $color: map-get($color-map, base);
 
     li {
