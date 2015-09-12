@@ -1,0 +1,45 @@
+
+@mixin breadcrumb-builder($size, $color-map, $styleClass: '') {
+
+  @if $styleClass != '' {
+    $styleClass: '.' + $styleClass;
+  }
+
+  $sizeClassName: '';
+  @if $size == 'medium' {
+    $sizeClassName: '.' + $size;
+  }
+
+  .breadcrumb#{$sizeClassName}#{$styleClass}  {
+    @include horizontal-list;
+
+    li {
+      &,
+      > a {
+        height: 15px;
+        line-height: 120%;
+
+        color: map-get($color-map, base);
+      }
+
+      padding: 0 18px 0 10px;
+      border: 1px solid map-get($color-map, base);
+      border-radius: 4px;
+      background-color: white;
+
+      @include font-size(small);
+
+      margin-left: -10px;
+
+      &:last-of-type {
+        padding-right: 10px;
+        color: white;
+        background-color: map-get($color-map, base);
+      }
+    }
+  }
+}
+
+@include breadcrumb-builder(small, $clr-default);
+@include breadcrumb-builder(small, $clr-primary, 'primary');
+@include breadcrumb-builder(small, $clr-secondary, 'secondary');
