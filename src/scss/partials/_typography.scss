@@ -1,6 +1,4 @@
 
-
-
 @mixin font-size($size: regular) {
   font-size: map-get($font-sizes, $size);
 }

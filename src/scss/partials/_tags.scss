@@ -1,0 +1,52 @@
+
+.tag-group {
+  @include horizontal-list;
+
+  li {
+    margin-right: 10px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+@mixin tag-builder($size, $color-map, $styleClass: '') {
+
+  @if $styleClass != '' {
+    $styleClass: '.' + $styleClass;
+  }
+
+  $sizeClassName: '';
+  @if $size != 'medium' {
+    $sizeClassName: '.' + $size;
+  }
+
+  .tag#{$sizeClassName}#{$styleClass}  {
+
+    display: inline-block;
+
+    $height: get-height($size);
+    $color: map-get($color-map, base);
+
+    height: $height + 2;
+    line-height: $height;
+
+    color: $color;
+
+    padding: 0 10px;
+    border: 1px solid $color;
+    border-radius: $border-radius;
+    background-color: white;
+
+    @include font-size($size);
+  }
+}
+
+@include tag-builder(tiny, $clr-default);
+@include tag-builder(tiny, $clr-primary, 'primary');
+@include tag-builder(tiny, $clr-secondary, 'secondary');
+
+@include tag-builder(small, $clr-default);
+@include tag-builder(small, $clr-primary, 'primary');
+@include tag-builder(small, $clr-secondary, 'secondary');
