@@ -1,0 +1,52 @@
+
+@mixin tab-group-builder($size, $color-map, $styleClass: '') {
+
+  @if $styleClass != '' {
+    $styleClass: '.' + $styleClass;
+  }
+
+  $sizeClassName: '';
+  @if $size != 'medium' {
+    $sizeClassName: '.' + $size;
+  }
+
+  .tab-group#{$sizeClassName}#{$styleClass} {
+    @include horizontal-list;
+
+    border-bottom: 1px solid map-get($color-map, base);
+
+    @include font-size($size);
+
+    > li {
+      margin-bottom: -1px;
+
+      border: 1px solid rgba(0,0,0,0);
+      border-radius: $border-radius $border-radius 0 0;
+
+      padding: .4em .7em;
+
+      margin-right: 1em;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &.active,
+      &:hover {
+        border: 1px solid map-get($color-map, base);
+      }
+
+      &.active {
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+}
+
+@include tab-group-builder(small, $clr-default);
+@include tab-group-builder(small, $clr-primary, primary);
+@include tab-group-builder(small, $clr-secondary, secondary);
+
+@include tab-group-builder(medium, $clr-default);
+@include tab-group-builder(medium, $clr-primary, primary);
+@include tab-group-builder(medium, $clr-secondary, secondary);
