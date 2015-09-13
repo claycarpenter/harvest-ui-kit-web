@@ -1,0 +1,65 @@
+
+label,
+input[type="text"],
+textarea {
+  display: block;
+}
+
+label {
+  @extend .opensans-w600;
+
+  input,
+  & + input,
+  textarea,
+  & + textarea {
+    margin-top: .5rem;
+  }
+}
+
+input,
+textarea {
+  @extend .opensans-w400;
+
+  border-radius: $border-radius;
+
+  background-color: white;
+
+  border: 1px solid rgba(0,0,0,0);
+  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.6);
+
+  $height: get-height(medium);
+  height: $height;
+
+  padding: $height / 3;
+
+  transition: box-shadow .5s;
+
+  &:focus {
+    // border: 1px solid rgba(0,0,0,.4);
+    box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 1);
+  }
+
+  // Placeholder uses lightweight font.
+  &::-webkit-input-placeholder {
+     @extend .opensans-w300;
+  }
+  &::-moz-placeholder {  /* Firefox 19+ */
+     @extend .opensans-w300;
+  }
+  &:-ms-input-placeholder {
+     @extend .opensans-w3400;
+  }
+
+  &.error {
+    box-shadow: inset 0 0 3px 1px map-get($clr-default, base);
+  }
+
+  &.success {
+    box-shadow: inset 0 0 3px 1px map-get($clr-primary, base);
+  }
+
+  &[disabled] {
+    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    background: #E7E7E7;
+  }
+}
