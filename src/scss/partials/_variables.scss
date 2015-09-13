@@ -16,20 +16,29 @@ $font-sizes: (
 // These are adjusted upward from the corresponding normal text sizes
 // to better size these icons for buttons.
 $fa-font-sizes: (
+  tiny: 1rem,
   small: 1.333rem,
   medium: 2.667rem,
   large: 4rem
 );
 
-
-$button-heights: (
-  small: $base-unit,
-  medium: $base-unit * 2,
-  large: $base-unit * 3
-);
-
 $geometry: (
-  tiny: 15px,
-  small: 30px,
-  medium: 30px
+  tiny: (
+    height: $base-unit / 2
+  ),
+  small: (
+    height: $base-unit
+  ),
+  medium: (
+    height: $base-unit * 2
+  ),
+  large: (
+    height: $base-unit *3
+  )
 );
+
+@function get-height($size) {
+  $geometry-map: map-get($geometry, $size);
+
+  @return map-get($geometry-map, height);
+}

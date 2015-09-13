@@ -13,7 +13,7 @@
   .breadcrumb#{$sizeClassName}#{$styleClass}  {
     @include horizontal-list;
 
-    $height: map-get($geometry, $size);
+    $height: get-height($size);
     $color: map-get($color-map, base);
 
     li {

@@ -1,6 +1,8 @@
 
 @mixin button-builder($color-map, $colorClassName: '') {
-  @each $size, $height in $button-heights {
+  @each $size, $geometry-map in $geometry {
+
+    $height: get-height($size);
 
     @if $size == 'medium' {
       $sizeClassName: '';
