@@ -1,0 +1,53 @@
+
+label {
+  $size: get-height(small);
+
+  display: inline-block;
+  position: relative;
+
+  margin-bottom: 1rem;
+
+  input[type="checkbox"] {
+    height: $size; width: $size;
+    visibility: hidden;
+
+    position: relative;
+    left: 0;
+    bottom: -($base-font-size / 2) + 1;
+
+    cursor: pointer;
+
+    margin: 0;
+    margin-right: 5px;
+
+    &:disabled {
+      cursor: default;
+    }
+
+    &::before {
+      content: '\f00c';
+      height: $size;
+      width: $size;
+      display: inline-block;
+
+      visibility: visible;
+
+      border: 1px solid rgba(0,0,0,0);
+      box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.6);
+      border-radius: $border-radius;
+
+      font-family: FontAwesome;
+      padding-top: 2px;
+      padding-left: 1px;
+      font-size: 26px;
+      color: white;
+      transition: color .15s;
+    }
+
+    &:checked::before {
+      // content: '\f00c';
+      color: map-get($clr-default, base);
+      // background-color: red;
+    }
+  }
+}

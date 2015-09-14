@@ -1,5 +1,4 @@
 
-label,
 input[type="text"],
 textarea {
   display: block;
@@ -9,11 +8,15 @@ label {
   @extend .opensans-w600;
 
   input,
-  & + input,
-  textarea,
-  & + textarea {
+  textarea {
     margin-top: .5rem;
   }
+
+}
+
+label + input,
+label + textarea {
+  margin-top: -.5rem;
 }
 
 input,
