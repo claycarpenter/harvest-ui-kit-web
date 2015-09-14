@@ -2573,14 +2573,13 @@ button.tiny {
   display: inline-block;
   text-decoration: none;
   border-radius: 4px;
-  height: 15px;
-  line-height: 15px;
-  padding: 0 7.5px;
+  transition: background-color 0.25s;
+  letter-spacing: 0.2em;
+  padding: 0.8em 1.2em 0.8em 1.4em;
   background-color: #BD4932;
   color: #FFF;
   font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: .2em;
   border: none; }
   a.btn.tiny.disabled,
   a.btn.tiny.disabled:hover,
@@ -2604,7 +2603,8 @@ button.tiny {
   button.tiny.fa {
     font-family: FontAwesome;
     font-size: 1rem;
-    padding: 0 3.75px;
+    letter-spacing: 0;
+    padding: .2em;
     width: 1.7rem;
     text-align: center; }
 
@@ -2613,14 +2613,13 @@ button.small {
   display: inline-block;
   text-decoration: none;
   border-radius: 4px;
-  height: 30px;
-  line-height: 30px;
-  padding: 0 15px;
+  transition: background-color 0.25s;
+  letter-spacing: 0.2em;
+  padding: 0.8em 1.2em 0.8em 1.4em;
   background-color: #BD4932;
   color: #FFF;
   font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: .2em;
   border: none; }
   a.btn.small.disabled,
   a.btn.small.disabled:hover,
@@ -2644,7 +2643,8 @@ button.small {
   button.small.fa {
     font-family: FontAwesome;
     font-size: 1.333rem;
-    padding: 0 7.5px;
+    letter-spacing: 0;
+    padding: .2em;
     width: 2.2661rem;
     text-align: center; }
 
@@ -2653,14 +2653,13 @@ button {
   display: inline-block;
   text-decoration: none;
   border-radius: 4px;
-  height: 60px;
-  line-height: 60px;
-  padding: 0 30px;
+  transition: background-color 0.25s;
+  letter-spacing: 0.2em;
+  padding: 0.8em 1.2em 0.8em 1.4em;
   background-color: #BD4932;
   color: #FFF;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: .2em;
   border: none; }
   a.btn.disabled,
   a.btn.disabled:hover,
@@ -2683,9 +2682,10 @@ button {
   a.btn.fa,
   button.fa {
     font-family: FontAwesome;
-    font-size: 2.667rem;
-    padding: 0 15px;
-    width: 4.5339rem;
+    font-size: 2rem;
+    letter-spacing: 0;
+    padding: .2em;
+    width: 3.4rem;
     text-align: center; }
 
 a.btn.large,
@@ -2693,14 +2693,13 @@ button.large {
   display: inline-block;
   text-decoration: none;
   border-radius: 4px;
-  height: 90px;
-  line-height: 90px;
-  padding: 0 45px;
+  transition: background-color 0.25s;
+  letter-spacing: 0.2em;
+  padding: 0.8em 1.2em 0.8em 1.4em;
   background-color: #BD4932;
   color: #FFF;
   font-size: 1.3rem;
   text-transform: uppercase;
-  letter-spacing: .2em;
   border: none; }
   a.btn.large.disabled,
   a.btn.large.disabled:hover,
@@ -2723,9 +2722,10 @@ button.large {
   a.btn.large.fa,
   button.large.fa {
     font-family: FontAwesome;
-    font-size: 4rem;
-    padding: 0 22.5px;
-    width: 6.8rem;
+    font-size: 2.5rem;
+    letter-spacing: 0;
+    padding: .2em;
+    width: 4.25rem;
     text-align: center; }
 
 a.btn.tiny.primary,
@@ -2733,14 +2733,13 @@ button.tiny.primary {
   display: inline-block;
   text-decoration: none;
   border-radius: 4px;
-  height: 15px;
-  line-height: 15px;
-  padding: 0 7.5px;
+  transition: background-color 0.25s;
+  letter-spacing: 0.2em;
+  padding: 0.8em 1.2em 0.8em 1.4em;
   background-color: #105B63;
   color: #FFF;
   font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: .2em;
   border: none; }
   a.btn.tiny.primary.disabled,
   a.btn.tiny.primary.disabled:hover,
@@ -2764,7 +2763,8 @@ button.tiny.primary {
   button.tiny.primary.fa {
     font-family: FontAwesome;
     font-size: 1rem;
-    padding: 0 3.75px;
+    letter-spacing: 0;
+    padding: .2em;
     width: 1.7rem;
     text-align: center; }
 
@@ -2773,14 +2773,13 @@ button.small.primary {
   display: inline-block;
   text-decoration: none;
   border-radius: 4px;
-  height: 30px;
-  line-height: 30px;
-  padding: 0 15px;
+  transition: background-color 0.25s;
+  letter-spacing: 0.2em;
+  padding: 0.8em 1.2em 0.8em 1.4em;
   background-color: #105B63;
   color: #FFF;
   font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: .2em;
   border: none; }
   a.btn.small.primary.disabled,
   a.btn.small.primary.disabled:hover,
@@ -2804,7 +2803,8 @@ button.small.primary {
   button.small.primary.fa {
     font-family: FontAwesome;
     font-size: 1.333rem;
-    padding: 0 7.5px;
+    letter-spacing: 0;
+    padding: .2em;
     width: 2.2661rem;
     text-align: center; }
 
@@ -2813,14 +2813,13 @@ button.primary {
   display: inline-block;
   text-decoration: none;
   border-radius: 4px;
-  height: 60px;
-  line-height: 60px;
-  padding: 0 30px;
+  transition: background-color 0.25s;
+  letter-spacing: 0.2em;
+  padding: 0.8em 1.2em 0.8em 1.4em;
   background-color: #105B63;
   color: #FFF;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: .2em;
   border: none; }
   a.btn.primary.disabled,
   a.btn.primary.disabled:hover,
@@ -2843,9 +2842,10 @@ button.primary {
   a.btn.primary.fa,
   button.primary.fa {
     font-family: FontAwesome;
-    font-size: 2.667rem;
-    padding: 0 15px;
-    width: 4.5339rem;
+    font-size: 2rem;
+    letter-spacing: 0;
+    padding: .2em;
+    width: 3.4rem;
     text-align: center; }
 
 a.btn.large.primary,
@@ -2853,14 +2853,13 @@ button.large.primary {
   display: inline-block;
   text-decoration: none;
   border-radius: 4px;
-  height: 90px;
-  line-height: 90px;
-  padding: 0 45px;
+  transition: background-color 0.25s;
+  letter-spacing: 0.2em;
+  padding: 0.8em 1.2em 0.8em 1.4em;
   background-color: #105B63;
   color: #FFF;
   font-size: 1.3rem;
   text-transform: uppercase;
-  letter-spacing: .2em;
   border: none; }
   a.btn.large.primary.disabled,
   a.btn.large.primary.disabled:hover,
@@ -2883,9 +2882,10 @@ button.large.primary {
   a.btn.large.primary.fa,
   button.large.primary.fa {
     font-family: FontAwesome;
-    font-size: 4rem;
-    padding: 0 22.5px;
-    width: 6.8rem;
+    font-size: 2.5rem;
+    letter-spacing: 0;
+    padding: .2em;
+    width: 4.25rem;
     text-align: center; }
 
 a.btn.tiny.secondary,
@@ -2893,14 +2893,13 @@ button.tiny.secondary {
   display: inline-block;
   text-decoration: none;
   border-radius: 4px;
-  height: 15px;
-  line-height: 15px;
-  padding: 0 7.5px;
+  transition: background-color 0.25s;
+  letter-spacing: 0.2em;
+  padding: 0.8em 1.2em 0.8em 1.4em;
   background-color: #DB9E36;
   color: #FFF;
   font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: .2em;
   border: none; }
   a.btn.tiny.secondary.disabled,
   a.btn.tiny.secondary.disabled:hover,
@@ -2924,7 +2923,8 @@ button.tiny.secondary {
   button.tiny.secondary.fa {
     font-family: FontAwesome;
     font-size: 1rem;
-    padding: 0 3.75px;
+    letter-spacing: 0;
+    padding: .2em;
     width: 1.7rem;
     text-align: center; }
 
@@ -2933,14 +2933,13 @@ button.small.secondary {
   display: inline-block;
   text-decoration: none;
   border-radius: 4px;
-  height: 30px;
-  line-height: 30px;
-  padding: 0 15px;
+  transition: background-color 0.25s;
+  letter-spacing: 0.2em;
+  padding: 0.8em 1.2em 0.8em 1.4em;
   background-color: #DB9E36;
   color: #FFF;
   font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: .2em;
   border: none; }
   a.btn.small.secondary.disabled,
   a.btn.small.secondary.disabled:hover,
@@ -2964,7 +2963,8 @@ button.small.secondary {
   button.small.secondary.fa {
     font-family: FontAwesome;
     font-size: 1.333rem;
-    padding: 0 7.5px;
+    letter-spacing: 0;
+    padding: .2em;
     width: 2.2661rem;
     text-align: center; }
 
@@ -2973,14 +2973,13 @@ button.secondary {
   display: inline-block;
   text-decoration: none;
   border-radius: 4px;
-  height: 60px;
-  line-height: 60px;
-  padding: 0 30px;
+  transition: background-color 0.25s;
+  letter-spacing: 0.2em;
+  padding: 0.8em 1.2em 0.8em 1.4em;
   background-color: #DB9E36;
   color: #FFF;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: .2em;
   border: none; }
   a.btn.secondary.disabled,
   a.btn.secondary.disabled:hover,
@@ -3003,9 +3002,10 @@ button.secondary {
   a.btn.secondary.fa,
   button.secondary.fa {
     font-family: FontAwesome;
-    font-size: 2.667rem;
-    padding: 0 15px;
-    width: 4.5339rem;
+    font-size: 2rem;
+    letter-spacing: 0;
+    padding: .2em;
+    width: 3.4rem;
     text-align: center; }
 
 a.btn.large.secondary,
@@ -3013,14 +3013,13 @@ button.large.secondary {
   display: inline-block;
   text-decoration: none;
   border-radius: 4px;
-  height: 90px;
-  line-height: 90px;
-  padding: 0 45px;
+  transition: background-color 0.25s;
+  letter-spacing: 0.2em;
+  padding: 0.8em 1.2em 0.8em 1.4em;
   background-color: #DB9E36;
   color: #FFF;
   font-size: 1.3rem;
   text-transform: uppercase;
-  letter-spacing: .2em;
   border: none; }
   a.btn.large.secondary.disabled,
   a.btn.large.secondary.disabled:hover,
@@ -3043,9 +3042,10 @@ button.large.secondary {
   a.btn.large.secondary.fa,
   button.large.secondary.fa {
     font-family: FontAwesome;
-    font-size: 4rem;
-    padding: 0 22.5px;
-    width: 6.8rem;
+    font-size: 2.5rem;
+    letter-spacing: 0;
+    padding: .2em;
+    width: 4.25rem;
     text-align: center; }
 
 .btn-group {
@@ -3080,15 +3080,10 @@ button.large.secondary {
     border-radius: 0 4px 4px 0;
     border: none; }
 
-.pagination button.small,
-.pagination a.btn.small,
 .pagination button.small.fa,
 .pagination a.btn.small.fa {
-  font-size: 1rem; }
-
-.pagination button,
-.pagination a.btn {
-  font-size: 1rem; }
+  padding: .4em 0;
+  width: 2em; }
 
 .breadcrumb.tiny {
   margin: 0;
@@ -3541,8 +3536,8 @@ textarea {
   background-color: white;
   border: 1px solid transparent;
   box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.6);
-  height: 60px;
-  padding: 20px;
+  height: 3rem;
+  padding: 1rem;
   transition: box-shadow 0.5s; }
   input:focus,
   textarea:focus {
@@ -3562,12 +3557,12 @@ textarea {
     background: #E7E7E7; }
 
 label input[type="checkbox"] {
-  height: 30px;
-  width: 30px;
+  height: 1.4rem;
+  width: 1.4rem;
   visibility: hidden;
   position: relative;
   left: 0;
-  bottom: -6.5px;
+  bottom: -.2rem;
   cursor: pointer;
   margin: 0;
   margin-right: 5px; }
@@ -3575,8 +3570,8 @@ label input[type="checkbox"] {
     cursor: default; }
   label input[type="checkbox"]::before {
     content: '\f00c';
-    height: 30px;
-    width: 30px;
+    height: 1.4rem;
+    width: 1.4rem;
     display: inline-block;
     visibility: visible;
     border: 1px solid transparent;
@@ -3584,9 +3579,9 @@ label input[type="checkbox"] {
     border-radius: 4px;
     font-family: FontAwesome;
     padding-top: 2px;
-    padding-left: 1px;
-    font-size: 26px;
-    color: white;
+    padding-left: 2px;
+    font-size: 1rem;
+    color: transparent;
     transition: color 0.15s; }
   label input[type="checkbox"]:checked::before {
     color: #BD4932; }
@@ -3594,12 +3589,12 @@ label input[type="checkbox"] {
     color: #888; }
 
 label input[type="radio"] {
-  height: 30px;
-  width: 30px;
+  height: 1.4rem;
+  width: 1.4rem;
   visibility: hidden;
   position: relative;
   left: 0;
-  bottom: -6.5px;
+  bottom: -.2rem;
   cursor: pointer;
   margin: 0;
   margin-right: 5px; }
@@ -3607,18 +3602,18 @@ label input[type="radio"] {
     cursor: default; }
   label input[type="radio"]::before {
     content: '\f111';
-    height: 30px;
-    width: 30px;
+    height: 1.4rem;
+    width: 1.4rem;
     display: inline-block;
     visibility: visible;
     border: 1px solid transparent;
     box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.6);
-    border-radius: 30px;
+    border-radius: 1.4rem;
     font-family: FontAwesome;
-    padding-top: 4px;
-    padding-left: 5px;
-    font-size: 21px;
-    color: white;
+    padding-top: .17rem;
+    padding-left: .25rem;
+    font-size: .85rem;
+    color: transparent;
     transition: color 0.15s; }
   label input[type="radio"]:checked::before {
     color: #BD4932; }
