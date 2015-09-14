@@ -40,8 +40,10 @@ label input[type="checkbox"] {
   }
 
   &:checked::before {
-    // content: '\f00c';
     color: map-get($clr-default, base);
-    // background-color: red;
+  }
+
+  &:disabled:checked::before {
+    color: #888;
   }
 }
