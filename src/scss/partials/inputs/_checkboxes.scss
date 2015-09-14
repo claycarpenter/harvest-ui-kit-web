@@ -1,6 +1,6 @@
 
 label input[type="checkbox"] {
-  $size: get-height(small);
+  $size: map-get($input-geometry, checkbox);
   height: $size;
   width: $size;
 
@@ -8,7 +8,7 @@ label input[type="checkbox"] {
 
   position: relative;
   left: 0;
-  bottom: -($base-font-size / 2) + 1;
+  bottom: -.2rem;
 
   cursor: pointer;
 
@@ -33,8 +33,8 @@ label input[type="checkbox"] {
 
     font-family: FontAwesome;
     padding-top: 2px;
-    padding-left: 1px;
-    font-size: 26px;
+    padding-left: 2px;
+    font-size: 1rem;
     color: white;
     transition: color .15s;
   }
