@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+
+        <title>Text Input Examples</title>
+
+        <link rel="stylesheet" href="/dist/harvest.css">
+
+        <style>
+        </style>
+    </head>
+    <body>
+      <header>
+        <a href="/">&lt; Back To Main</a>
+      </header>
+
+      <h1>Text Input Examples</h1>
+
+      <section>
+        <h2>Medium Text Inputs</h2>
+
+        <figure>
+          <label>
+            Full Name
+            <input type="text" placeholder="">
+          </label>
+
+          <figcaption>Label with text input child, no placeholder</figcaption>
+        </figure>
+
+        <figure>
+          <label for="fullName">
+            Full Name
+          </label>
+          <input id="fullName" type="text" placeholder="">
+
+          <figcaption>Label with text input sibling, no placeholder</figcaption>
+        </figure>
+
+        <figure>
+          <input type="text" placeholder="Full Name">
+
+          <figcaption>Text input, with placeholder</figcaption>
+        </figure>
+
+        <figure>
+          <input type="text" placeholder="Full Name" value="George Washington">
+
+          <figcaption>Text input, with value</figcaption>
+        </figure>
+
+        <figure>
+          <label>
+            ZIP Code
+            <input type="text" placeholder="ZIP Code" value="abcde" class="error">
+          </label>
+
+          <figcaption>Text input, error state</figcaption>
+        </figure>
+
+        <figure>
+          <label>
+            ZIP Code
+            <input type="text" placeholder="ZIP Code" value="90210" class="success">
+          </label>
+
+          <figcaption>Text input, success state</figcaption>
+        </figure>
+
+        <figure>
+          <label>
+            Message
+            <input type="text" placeholder="Disabled" disabled>
+          </label>
+
+          <figcaption>Disabled text input</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Medium Textareas</h2>
+
+        <figure>
+          <label>
+            Message
+            <textarea style="width: 300px; height: 150px;"></textarea>
+          </label>
+
+          <figcaption>Label with textarea child</figcaption>
+        </figure>
+
+        <figure>
+          <label for="textArea">Message</label>
+          <textarea style="width: 300px; height: 150px;" id="textArea"></textarea>
+
+          <figcaption>Label with textarea sibling</figcaption>
+        </figure>
+
+        <figure>
+          <label>
+            Message
+            <textarea style="width: 300px; height: 150px;" placeholder="Say anything you want"></textarea>
+          </label>
+
+          <figcaption>Label with placeholder</figcaption>
+        </figure>
+
+        <figure>
+          <label>
+            Message
+            <textarea style="width: 300px; height: 150px;">Skateboard kitsch chillwave, typewriter tofu paleo farm-to-table.</textarea>
+          </label>
+
+          <figcaption>Textarea, with value</figcaption>
+        </figure>
+
+        <figure>
+          <label>
+            Message
+            <textarea style="width: 300px; height: 150px;" class="error">Skateboard kitsch chillwave, typewriter tofu paleo farm-to-table.</textarea>
+          </label>
+
+          <figcaption>Textarea, error state</figcaption>
+        </figure>
+
+        <figure>
+          <label>
+            Message
+            <textarea style="width: 300px; height: 150px;" class="success">Skateboard kitsch chillwave, typewriter tofu paleo farm-to-table.</textarea>
+          </label>
+
+          <figcaption>Textarea, success state</figcaption>
+        </figure>
+
+        <figure>
+          <label>
+            Message
+            <textarea style="width: 300px; height: 150px;" disabled>Skateboard kitsch chillwave, typewriter tofu paleo farm-to-table.</textarea>
+          </label>
+
+          <figcaption>Textarea, disabled state</figcaption>
+        </figure>
+
+      </section>
+
+    </body>
+</html>
