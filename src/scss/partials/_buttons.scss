@@ -73,7 +73,8 @@ $button-geometry: (
         $font-size: map-get($fa-font-sizes, $size);
         font-size: $font-size;
 
-        padding: .2em (.2em - $letter-spacing) .2em .2em;
+        letter-spacing: 0;
+        padding: .2em;
 
         width: $font-size * 1.7;
 
