@@ -1,8 +1,8 @@
 
 $button-geometry: (
   tiny: (
-    padding-vert: 3px,
-    padding-horiz: 5px
+    padding-vert: .8em,
+    padding-horiz: 1.4em
   ),
   small: (
     padding-vert: .8em,
@@ -37,10 +37,13 @@ $button-geometry: (
 
       border-radius: $border-radius;
 
+      $letter-spacing: .2em;
+      letter-spacing: $letter-spacing;
+
       $padding-map: map-get($button-geometry, $size);
       $padding-vert: map-get($padding-map, padding-vert);
       $padding-horiz: map-get($padding-map, padding-horiz);
-      padding: $padding-vert $padding-horiz;
+      padding: $padding-vert ($padding-horiz - $letter-spacing) $padding-vert $padding-horiz;
 
       @include bg-color($color-map, base);
 
@@ -70,7 +73,7 @@ $button-geometry: (
         $font-size: map-get($fa-font-sizes, $size);
         font-size: $font-size;
 
-        padding: 0 ($height / 4);
+        padding: .2em (.2em - $letter-spacing) .2em .2em;
 
         width: $font-size * 1.7;
 
@@ -82,7 +85,6 @@ $button-geometry: (
       @include font-size($size);
 
       text-transform: uppercase;
-      letter-spacing: .2em;
 
       border: none;
     }
