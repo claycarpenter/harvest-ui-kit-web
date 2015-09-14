@@ -1,11 +1,5 @@
 
 // Partials
+@import 'common';
 @import 'text-inputs';
 @import 'checkboxes-radios';
-
-// General styles.
-
-// Clear out focus highlights from all elements.
-*:focus {
-  outline: none;
-}

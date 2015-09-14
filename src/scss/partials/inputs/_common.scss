@@ -1,0 +1,13 @@
+// General styles.
+
+// Clear out focus highlights from all elements.
+*:focus {
+  outline: none;
+}
+
+label {
+  display: inline-block;
+  position: relative;
+
+  margin-bottom: 1rem;
+}
