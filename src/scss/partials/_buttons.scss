@@ -1,4 +1,23 @@
 
+$button-geometry: (
+  tiny: (
+    padding-vert: 3px,
+    padding-horiz: 5px
+  ),
+  small: (
+    padding-vert: .4rem,
+    padding-horiz: .7rem
+  ),
+  medium: (
+    padding-vert: .8rem,
+    padding-horiz: 1.4rem
+  ),
+  large: (
+    padding-vert: 1.2rem,
+    padding-horiz: 2.1rem
+  )
+);
+
 @mixin button-builder($color-map, $colorClassName: '') {
   @each $size, $geometry-map in $geometry {
 
@@ -18,10 +37,10 @@
 
       border-radius: $border-radius;
 
-      height: $height;
-      line-height: $height;
-
-      padding: 0 ($height / 2);
+      $padding-map: map-get($button-geometry, $size);
+      $padding-vert: map-get($padding-map, padding-vert);
+      $padding-horiz: map-get($padding-map, padding-horiz);
+      padding: $padding-vert $padding-horiz;
 
       @include bg-color($color-map, base);
 
