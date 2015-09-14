@@ -37,6 +37,8 @@ $button-geometry: (
 
       border-radius: $border-radius;
 
+      transition: background-color .25s;
+
       $letter-spacing: .2em;
       letter-spacing: $letter-spacing;
 
